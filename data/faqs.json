@@ -1,0 +1,82 @@
+[
+  {
+    "pergunta": "Como faço login na minha conta?",
+    "resposta": "Na tela inicial, clique em \"Entrar\", informe seu e-mail e senha cadastrados e clique em \"Acessar\". Se estiver com problemas, use a opção \"Esqueci minha senha\"."
+  },
+  {
+    "pergunta": "Esqueci minha senha, como recuperar?",
+    "resposta": "Clique em \"Esqueci minha senha\" na tela de login, digite o e-mail cadastrado e siga o link de redefinição que enviaremos para a sua caixa de entrada."
+  },
+  {
+    "pergunta": "Como faço para criar uma conta nova?",
+    "resposta": "Clique em \"Criar conta\", preencha nome, e-mail e uma senha, aceite os termos de uso e confirme pelo e-mail de verificação que você vai receber."
+  },
+  {
+    "pergunta": "Como altero minha senha atual?",
+    "resposta": "Acesse Configurações > Segurança > Alterar senha. Informe a senha atual, digite a nova senha duas vezes e salve."
+  },
+  {
+    "pergunta": "Como atualizo meus dados cadastrais?",
+    "resposta": "Vá em Configurações > Meu perfil, edite os campos desejados (nome, telefone, endereço) e clique em \"Salvar alterações\"."
+  },
+  {
+    "pergunta": "Quais formas de pagamento vocês aceitam?",
+    "resposta": "Aceitamos cartão de crédito, cartão de débito, Pix e boleto bancário. As opções aparecem na etapa de pagamento do pedido."
+  },
+  {
+    "pergunta": "Como faço para pagar com Pix?",
+    "resposta": "Na etapa de pagamento, escolha \"Pix\", copie o código ou escaneie o QR Code no app do seu banco. A confirmação costuma ser imediata."
+  },
+  {
+    "pergunta": "Meu pagamento foi recusado, o que fazer?",
+    "resposta": "Verifique os dados do cartão, o limite disponível e se o cartão está desbloqueado. Se persistir, tente outra forma de pagamento ou contate o seu banco."
+  },
+  {
+    "pergunta": "Como acompanho o status do meu pedido?",
+    "resposta": "Acesse \"Meus pedidos\" no menu da sua conta. Lá você vê o status atualizado: em processamento, enviado ou entregue."
+  },
+  {
+    "pergunta": "Qual o prazo de entrega?",
+    "resposta": "O prazo aparece na finalização da compra e varia conforme o seu endereço. Após o envio, o rastreamento fica disponível em \"Meus pedidos\"."
+  },
+  {
+    "pergunta": "Como faço para cancelar um pedido?",
+    "resposta": "Em \"Meus pedidos\", selecione o pedido desejado e clique em \"Cancelar\". Só é possível cancelar enquanto o pedido não foi enviado."
+  },
+  {
+    "pergunta": "Como solicito reembolso de uma compra?",
+    "resposta": "Abra \"Meus pedidos\", escolha o item, clique em \"Solicitar reembolso\" e informe o motivo. O valor é devolvido na forma de pagamento original."
+  },
+  {
+    "pergunta": "Como troco ou devolvo um produto?",
+    "resposta": "Você tem até 7 dias após o recebimento para solicitar troca ou devolução em \"Meus pedidos\" > \"Trocar/Devolver\". Enviaremos as instruções de envio."
+  },
+  {
+    "pergunta": "Como atualizo meu endereço de entrega?",
+    "resposta": "Vá em Configurações > Endereços, edite o endereço existente ou clique em \"Adicionar endereço\" e defina-o como principal."
+  },
+  {
+    "pergunta": "Como entro em contato com o suporte?",
+    "resposta": "Você pode falar com o suporte pelo chat dentro do app, pelo e-mail suporte@exemplo.com ou pelo telefone informado na página \"Ajuda\"."
+  },
+  {
+    "pergunta": "Como cancelo minha assinatura?",
+    "resposta": "Acesse Configurações > Assinatura > Cancelar assinatura. O acesso continua válido até o fim do período já pago."
+  },
+  {
+    "pergunta": "Como emito a nota fiscal da minha compra?",
+    "resposta": "A nota fiscal fica disponível em \"Meus pedidos\", no detalhe de cada pedido, no botão \"Baixar nota fiscal\" após a confirmação do pagamento."
+  },
+  {
+    "pergunta": "Como ativo a verificação em duas etapas?",
+    "resposta": "Vá em Configurações > Segurança > Verificação em duas etapas, ative a opção e siga as instruções para vincular seu aplicativo autenticador ou telefone."
+  },
+  {
+    "pergunta": "Como excluo minha conta permanentemente?",
+    "resposta": "Acesse Configurações > Conta > Excluir conta. A exclusão é definitiva e remove seus dados após o período de confirmação informado na tela."
+  },
+  {
+    "pergunta": "O aplicativo está travando, o que eu faço?",
+    "resposta": "Feche e abra o aplicativo, verifique sua conexão com a internet e confirme se há atualização disponível na loja. Se continuar, reinstale o app."
+  }
+]

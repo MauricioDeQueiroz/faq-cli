@@ -1,10 +1,10 @@
-"""FAQ CLI — Fase 3 (score de relevância e escolha da melhor FAQ).
+"""FAQ CLI — Fase 4 (limiar de decisão e saída formatada).
 
 Uso: python faq.py "sua pergunta"
 
 Nesta fase o programa normaliza a pergunta, calcula um score de relevância
-contra cada FAQ e escolhe a de maior score. O limiar de decisão e a saída
-formatada vêm na fase seguinte.
+contra cada FAQ, escolhe a de maior score e aplica o limiar de 30% em três
+faixas: match direto, sugestão (com prefixo) e "nada parecido".
 """
 
 import json
@@ -16,6 +16,10 @@ from pathlib import Path
 # Caminho do JSON relativo ao próprio script (funciona independente do diretório
 # de onde o programa é chamado).
 CAMINHO_FAQS = Path(__file__).resolve().parent / "data" / "faqs.json"
+
+# Limiar de decisão: score >= 30% conta como match direto; abaixo disso (mas > 0)
+# vira sugestão; score 0 em todas as FAQs vira "nada parecido".
+LIMIAR = 0.30
 
 # Stopwords PT-BR curtas e fixas. IMPORTANTE: guardadas já na forma NORMALIZADA
 # (minúsculas e SEM acento), pois o filtro é aplicado depois de remover acentos.
@@ -102,6 +106,22 @@ def melhor_faq(tokens_input, faqs):
     return melhor, melhor_score
 
 
+def formatar_saida(faq, score):
+    """Monta o texto de saída aplicando o limiar de 30% em três faixas.
+
+    - score >= LIMIAR (match direto): pergunta oficial + resposta.
+    - 0 < score < LIMIAR (sugestão): a mesma FAQ, no mesmo formato, prefixada
+      com "Sugestao de resposta: ".
+    - score == 0 (nada parecido): "Não encontrei nada parecido", sem sugerir
+      nada (evita sugerir a FAQ #1 por desempate com todos os scores zerados).
+    """
+    if score == 0:
+        return "Não encontrei nada parecido"
+    if score >= LIMIAR:
+        return f"{faq['pergunta']}\n{faq['resposta']}"
+    return f"Sugestao de resposta: {faq['pergunta']}\n{faq['resposta']}"
+
+
 def main():
     # Encoding do stdout (Windows/PowerShell): força UTF-8 para não estourar
     # UnicodeEncodeError ao imprimir acentos. Alternativa documentada:
@@ -128,11 +148,8 @@ def main():
     tokens = normalizar(pergunta)
     faq, score = melhor_faq(tokens, faqs)
 
-    # Stub da Fase 3: mostra a melhor FAQ e seu score (limiar/saída vêm na Fase 4).
-    print(f"Você perguntou: {pergunta}")
-    print(f"Score: {score:.0%}")
-    if faq is not None:
-        print(f"FAQ mais próxima: {faq['pergunta']}")
+    # Aplica o limiar de decisão e imprime a saída formatada.
+    print(formatar_saida(faq, score))
 
 
 if __name__ == "__main__":

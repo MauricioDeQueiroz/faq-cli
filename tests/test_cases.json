@@ -1,0 +1,12 @@
+[
+  { "input": "esqueci a senha", "esperado_id": 2 },
+  { "input": "mudar minha senha atual", "esperado_id": 4 },
+  { "input": "quero registrar um novo usuario", "esperado_id": 3 },
+  { "input": "como pagar usando pix", "esperado_id": 7 },
+  { "input": "meu cartao foi recusado", "esperado_id": 8 },
+  { "input": "onde vejo o rastreamento do pedido", "esperado_id": 9 },
+  { "input": "quero o estorno do meu dinheiro", "esperado_id": 12 },
+  { "input": "falar com o suporte tecnico", "esperado_id": 15 },
+  { "input": "ativar autenticador de duas etapas", "esperado_id": 18 },
+  { "input": "quero comprar uma bicicleta", "esperado_id": null }
+]

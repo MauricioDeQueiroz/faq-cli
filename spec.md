@@ -39,4 +39,4 @@ Saída: pergunta encontrada + resposta, juntas.
 - Escrever um conjunto de perguntas de teste (mínimo 10, paráfrases reais, não repetição do texto oficial), cada uma com a FAQ esperada já conhecida.
 - Quando o score for menor que 30%, o app deve exibir mensagem de "Pergunta não encontrada" + sugestão da FAQ mais próxima, sem travar ou lançar erro.
 - Normalização deve ser consistente: variações de acento/pontuação no input (ex.: "Como faço Login?" vs "como faco login") devem retornar a mesma FAQ.
-- De 10 perguntas de teste, pelo menos 7 (70%) devem retornar a FAQ correta esperada.
+- De 10 perguntas de teste, pelo menos 8 (80%) devem retornar a FAQ correta esperada.

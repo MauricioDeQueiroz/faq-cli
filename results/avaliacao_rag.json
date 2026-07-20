@@ -1,0 +1,301 @@
+{
+  "top_k": 3,
+  "limiar_sem_resposta": 0.3,
+  "total_perguntas": 10,
+  "acertos_retrieval": 8,
+  "resultados": [
+    {
+      "id": 1,
+      "pergunta": "Perdi meu código de acesso, como faço para gerar um novo?",
+      "tipo": "ambiguo_duplo",
+      "gabarito_faqs": [
+        2,
+        18
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 4,
+          "faq_pergunta": "Como altero minha senha atual?",
+          "score": 0.4399
+        },
+        {
+          "faq_id": 5,
+          "faq_pergunta": "Como atualizo meus dados cadastrais?",
+          "score": 0.4232
+        },
+        {
+          "faq_id": 3,
+          "faq_pergunta": "Como faço para criar uma conta nova?",
+          "score": 0.4175
+        }
+      ],
+      "faq_citada_top1": 4,
+      "sistema_respondeu": true,
+      "acertou_retrieval": false,
+      "nota_original": "Gabarito principal é a FAQ 2 (recuperar senha), mas a FAQ 18 (2FA) é leitura defensável pelo termo 'código'. Sucesso de retrieval = ambas aparecem no top-k. Sucesso de geração (quando houver LLM) = reconhecer a ambiguidade, não cravar uma só."
+    },
+    {
+      "id": 2,
+      "pergunta": "Quais as bandeiras e modalidades de cobrança que vocês processam?",
+      "tipo": "parafrase_simples",
+      "gabarito_faqs": [
+        6
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 6,
+          "faq_pergunta": "Quais formas de pagamento vocês aceitam?",
+          "score": 0.3858
+        },
+        {
+          "faq_id": 17,
+          "faq_pergunta": "Como emito a nota fiscal da minha compra?",
+          "score": 0.3555
+        },
+        {
+          "faq_id": 8,
+          "faq_pergunta": "Meu pagamento foi recusado, o que fazer?",
+          "score": 0.3449
+        }
+      ],
+      "faq_citada_top1": 6,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Sinônimo de 'formas de pagamento'. Sem ambiguidade esperada."
+    },
+    {
+      "id": 3,
+      "pergunta": "Quero que as entregas venham para a minha casa nova, onde mudo?",
+      "tipo": "mapeamento_intencao",
+      "gabarito_faqs": [
+        14
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 13,
+          "faq_pergunta": "Como troco ou devolvo um produto?",
+          "score": 0.4692
+        },
+        {
+          "faq_id": 14,
+          "faq_pergunta": "Como atualizo meu endereço de entrega?",
+          "score": 0.4289
+        },
+        {
+          "faq_id": 10,
+          "faq_pergunta": "Qual o prazo de entrega?",
+          "score": 0.362
+        }
+      ],
+      "faq_citada_top1": 13,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Mapeamento de intenção (mudança de endereço) para FAQ 14, sem menção literal a 'endereço'."
+    },
+    {
+      "id": 4,
+      "pergunta": "Como habilito o 2FA no meu perfil?",
+      "tipo": "termo_tecnico",
+      "gabarito_faqs": [
+        18
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 5,
+          "faq_pergunta": "Como atualizo meus dados cadastrais?",
+          "score": 0.3776
+        },
+        {
+          "faq_id": 18,
+          "faq_pergunta": "Como ativo a verificação em duas etapas?",
+          "score": 0.329
+        },
+        {
+          "faq_id": 3,
+          "faq_pergunta": "Como faço para criar uma conta nova?",
+          "score": 0.3189
+        }
+      ],
+      "faq_citada_top1": 5,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Termo técnico alternativo ('2FA') para 'verificação em duas etapas'."
+    },
+    {
+      "id": 5,
+      "pergunta": "A tela congelou e o sistema fechou sozinho.",
+      "tipo": "parafrase_operacional",
+      "gabarito_faqs": [
+        20
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 19,
+          "faq_pergunta": "Como excluo minha conta permanentemente?",
+          "score": 0.2456
+        },
+        {
+          "faq_id": 20,
+          "faq_pergunta": "O aplicativo está travando, o que eu faço?",
+          "score": 0.2283
+        },
+        {
+          "faq_id": 16,
+          "faq_pergunta": "Como cancelo minha assinatura?",
+          "score": 0.2108
+        }
+      ],
+      "faq_citada_top1": 19,
+      "sistema_respondeu": false,
+      "acertou_retrieval": false,
+      "nota_original": "Descrição do problema em vez do termo 'travando'."
+    },
+    {
+      "id": 6,
+      "pergunta": "Vocês têm vagas abertas para estagiário de desenvolvimento?",
+      "tipo": "inexistente",
+      "gabarito_faqs": [],
+      "top_k_recuperado": [
+        {
+          "faq_id": 20,
+          "faq_pergunta": "O aplicativo está travando, o que eu faço?",
+          "score": 0.2673
+        },
+        {
+          "faq_id": 15,
+          "faq_pergunta": "Como entro em contato com o suporte?",
+          "score": 0.2165
+        },
+        {
+          "faq_id": 6,
+          "faq_pergunta": "Quais formas de pagamento vocês aceitam?",
+          "score": 0.1976
+        }
+      ],
+      "faq_citada_top1": 20,
+      "sistema_respondeu": false,
+      "acertou_retrieval": true,
+      "nota_original": "Pergunta fora do corpus. Sucesso = sistema reconhecer que não há FAQ relevante (score abaixo do limiar), não forçar uma resposta."
+    },
+    {
+      "id": 7,
+      "pergunta": "Como mudo?",
+      "tipo": "ambiguidade_extrema",
+      "gabarito_faqs": [
+        4,
+        5,
+        14
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 4,
+          "faq_pergunta": "Como altero minha senha atual?",
+          "score": 0.3951
+        },
+        {
+          "faq_id": 5,
+          "faq_pergunta": "Como atualizo meus dados cadastrais?",
+          "score": 0.34
+        },
+        {
+          "faq_id": 14,
+          "faq_pergunta": "Como atualizo meu endereço de entrega?",
+          "score": 0.328
+        }
+      ],
+      "faq_citada_top1": 4,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Sem gabarito único por design. Sucesso de retrieval = top-k contém idealmente as FAQs 4, 5 e/ou 14. Sucesso de geração (quando houver LLM) = recusar adivinhar e pedir esclarecimento; cravar uma resposta única é erro de geração."
+    },
+    {
+      "id": 8,
+      "pergunta": "Esqueci meu e-mail, como entro na minha conta?",
+      "tipo": "ambiguo_duplo",
+      "gabarito_faqs": [
+        1,
+        2
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 2,
+          "faq_pergunta": "Esqueci minha senha, como recuperar?",
+          "score": 0.7435
+        },
+        {
+          "faq_id": 1,
+          "faq_pergunta": "Como faço login na minha conta?",
+          "score": 0.6813
+        },
+        {
+          "faq_id": 9,
+          "faq_pergunta": "Como acompanho o status do meu pedido?",
+          "score": 0.4734
+        }
+      ],
+      "faq_citada_top1": 2,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Mistura 'esqueci' (recuperação) com 'entro na conta' (login). Ambas as FAQs 1 e 2 são leituras defensáveis."
+    },
+    {
+      "id": 9,
+      "pergunta": "Vocês têm o papel da minha compra?",
+      "tipo": "parafrase_simples",
+      "gabarito_faqs": [
+        17
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 17,
+          "faq_pergunta": "Como emito a nota fiscal da minha compra?",
+          "score": 0.4545
+        },
+        {
+          "faq_id": 9,
+          "faq_pergunta": "Como acompanho o status do meu pedido?",
+          "score": 0.443
+        },
+        {
+          "faq_id": 13,
+          "faq_pergunta": "Como troco ou devolvo um produto?",
+          "score": 0.4306
+        }
+      ],
+      "faq_citada_top1": 17,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Sinônimo popular ('papel') para nota fiscal."
+    },
+    {
+      "id": 10,
+      "pergunta": "Quero meu dinheiro de volta porque desisti do pedido",
+      "tipo": "ambiguo_duplo",
+      "gabarito_faqs": [
+        11,
+        12
+      ],
+      "top_k_recuperado": [
+        {
+          "faq_id": 12,
+          "faq_pergunta": "Como solicito reembolso de uma compra?",
+          "score": 0.6384
+        },
+        {
+          "faq_id": 13,
+          "faq_pergunta": "Como troco ou devolvo um produto?",
+          "score": 0.5621
+        },
+        {
+          "faq_id": 8,
+          "faq_pergunta": "Meu pagamento foi recusado, o que fazer?",
+          "score": 0.5319
+        }
+      ],
+      "faq_citada_top1": 12,
+      "sistema_respondeu": true,
+      "acertou_retrieval": true,
+      "nota_original": "Funde cancelamento (desisti) e reembolso (dinheiro de volta). Ambas as FAQs 11 e 12 são leituras defensáveis."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "pergunta": "Perdi meu código de acesso, como faço para gerar um novo?",
+    "gabarito_faqs": [2, 18],
+    "tipo": "ambiguo_duplo",
+    "nota": "Gabarito principal é a FAQ 2 (recuperar senha), mas a FAQ 18 (2FA) é leitura defensável pelo termo 'código'. Sucesso de retrieval = ambas aparecem no top-k. Sucesso de geração (quando houver LLM) = reconhecer a ambiguidade, não cravar uma só."
+  },
+  {
+    "id": 2,
+    "pergunta": "Quais as bandeiras e modalidades de cobrança que vocês processam?",
+    "gabarito_faqs": [6],
+    "tipo": "parafrase_simples",
+    "nota": "Sinônimo de 'formas de pagamento'. Sem ambiguidade esperada."
+  },
+  {
+    "id": 3,
+    "pergunta": "Quero que as entregas venham para a minha casa nova, onde mudo?",
+    "gabarito_faqs": [14],
+    "tipo": "mapeamento_intencao",
+    "nota": "Mapeamento de intenção (mudança de endereço) para FAQ 14, sem menção literal a 'endereço'."
+  },
+  {
+    "id": 4,
+    "pergunta": "Como habilito o 2FA no meu perfil?",
+    "gabarito_faqs": [18],
+    "tipo": "termo_tecnico",
+    "nota": "Termo técnico alternativo ('2FA') para 'verificação em duas etapas'."
+  },
+  {
+    "id": 5,
+    "pergunta": "A tela congelou e o sistema fechou sozinho.",
+    "gabarito_faqs": [20],
+    "tipo": "parafrase_operacional",
+    "nota": "Descrição do problema em vez do termo 'travando'."
+  },
+  {
+    "id": 6,
+    "pergunta": "Vocês têm vagas abertas para estagiário de desenvolvimento?",
+    "gabarito_faqs": [],
+    "tipo": "inexistente",
+    "nota": "Pergunta fora do corpus. Sucesso = sistema reconhecer que não há FAQ relevante (score abaixo do limiar), não forçar uma resposta."
+  },
+  {
+    "id": 7,
+    "pergunta": "Como mudo?",
+    "gabarito_faqs": [4, 5, 14],
+    "tipo": "ambiguidade_extrema",
+    "nota": "Sem gabarito único por design. Sucesso de retrieval = top-k contém idealmente as FAQs 4, 5 e/ou 14. Sucesso de geração (quando houver LLM) = recusar adivinhar e pedir esclarecimento; cravar uma resposta única é erro de geração."
+  },
+  {
+    "id": 8,
+    "pergunta": "Esqueci meu e-mail, como entro na minha conta?",
+    "gabarito_faqs": [1, 2],
+    "tipo": "ambiguo_duplo",
+    "nota": "Mistura 'esqueci' (recuperação) com 'entro na conta' (login). Ambas as FAQs 1 e 2 são leituras defensáveis."
+  },
+  {
+    "id": 9,
+    "pergunta": "Vocês têm o papel da minha compra?",
+    "gabarito_faqs": [17],
+    "tipo": "parafrase_simples",
+    "nota": "Sinônimo popular ('papel') para nota fiscal."
+  },
+  {
+    "id": 10,
+    "pergunta": "Quero meu dinheiro de volta porque desisti do pedido",
+    "gabarito_faqs": [11, 12],
+    "tipo": "ambiguo_duplo",
+    "nota": "Funde cancelamento (desisti) e reembolso (dinheiro de volta). Ambas as FAQs 11 e 12 são leituras defensáveis."
+  }
+]

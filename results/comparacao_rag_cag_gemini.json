@@ -1,0 +1,425 @@
+{
+  "resumo": {
+    "total_perguntas": 9,
+    "rag": {
+      "acertos": 8,
+      "taxa_acerto": 0.89,
+      "latencia_media_s": 10.159,
+      "tokens_entrada_medio": 298.5556,
+      "tokens_saida_medio": 74.6667,
+      "custo_total_estimado_usd": 0.003359
+    },
+    "cag": {
+      "acertos": 8,
+      "taxa_acerto": 0.89,
+      "latencia_media_s": 15.4952,
+      "tokens_entrada_medio": 1980.6667,
+      "tokens_saida_medio": 78.5556,
+      "custo_total_estimado_usd": 0.011034
+    }
+  },
+  "registros": [
+    {
+      "id": 1,
+      "pergunta": "Perdi meu código de acesso, como faço para gerar um novo?",
+      "tipo": "ambiguo_duplo",
+      "gabarito_faqs": [
+        2,
+        18
+      ],
+      "rag": {
+        "resposta": "Nenhuma das FAQs fornecidas responde à sua pergunta sobre como gerar um novo código de acesso ou recuperar uma senha perdida. As FAQs disponíveis tratam apenas de alteração de senha quando se sabe a atual (FAQ #4), atualização de dados cadastrais (FAQ #5) e criação de uma conta nova (FAQ #3).",
+        "faqs_citadas": [
+          3,
+          4,
+          5
+        ],
+        "acertou": false,
+        "tokens_entrada": 295,
+        "tokens_saida": 66,
+        "latencia_s": 2.692,
+        "custo_estimado_usd": 0.000345,
+        "top_k_recuperado": [
+          {
+            "faq_id": 4,
+            "score": 0.4399
+          },
+          {
+            "faq_id": 5,
+            "score": 0.4232
+          },
+          {
+            "faq_id": 3,
+            "score": 0.4175
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Sua pergunta pode se referir a duas situações diferentes. Por favor, identifique qual delas corresponde à sua necessidade:\n\n1. **Senha da conta:** Se o \"código\" for a senha usada para entrar no sistema, clique em \"Esqueci minha senha\" na tela de login, digite seu e-mail cadastrado e siga o link de redefinição enviado para sua caixa de entrada.\nFonte: FAQ #2\n\n2. **Verificação em duas etapas:** Se você se refere ao código de segurança adicional (2FA), as configurações e o vínculo de aplicativos autenticadores ou telefone são gerenciados em Configurações > Segurança > Verificação em duas etapas.\nFonte: FAQ #18\n\nPor favor, esclareça qual desses casos você deseja resolver para que eu possa ajudar com mais precisão.",
+        "faqs_citadas": [
+          2,
+          18
+        ],
+        "acertou": true,
+        "tokens_entrada": 1983,
+        "tokens_saida": 170,
+        "latencia_s": 5.254,
+        "custo_estimado_usd": 0.001502
+      }
+    },
+    {
+      "id": 2,
+      "pergunta": "Quais as bandeiras e modalidades de cobrança que vocês processam?",
+      "tipo": "parafrase_simples",
+      "gabarito_faqs": [
+        6
+      ],
+      "rag": {
+        "resposta": "As modalidades de cobrança aceitas são cartão de crédito, cartão de débito, Pix e boleto bancário. As FAQs fornecidas não contêm informações específicas sobre quais bandeiras de cartão são processadas.\n\nFonte: FAQ #6",
+        "faqs_citadas": [
+          6
+        ],
+        "acertou": true,
+        "tokens_entrada": 303,
+        "tokens_saida": 49,
+        "latencia_s": 8.898,
+        "custo_estimado_usd": 0.000298,
+        "top_k_recuperado": [
+          {
+            "faq_id": 6,
+            "score": 0.3858
+          },
+          {
+            "faq_id": 17,
+            "score": 0.3555
+          },
+          {
+            "faq_id": 8,
+            "score": 0.3449
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Aceitamos cartão de crédito, cartão de débito, Pix e boleto bancário. As opções disponíveis aparecem para escolha na etapa de pagamento do seu pedido.\n\nFonte: FAQ #6",
+        "faqs_citadas": [
+          6
+        ],
+        "acertou": true,
+        "tokens_entrada": 1983,
+        "tokens_saida": 39,
+        "latencia_s": 20.884,
+        "custo_estimado_usd": 0.001108
+      }
+    },
+    {
+      "id": 3,
+      "pergunta": "Quero que as entregas venham para a minha casa nova, onde mudo?",
+      "tipo": "mapeamento_intencao",
+      "gabarito_faqs": [
+        14
+      ],
+      "rag": {
+        "resposta": "Para alterar o seu endereço de entrega, você deve acessar Configurações > Endereços. Nessa seção, é possível editar o endereço existente ou clicar em \"Adicionar endereço\" e defini-lo como o principal.\n\nFonte: FAQ #14",
+        "faqs_citadas": [
+          14
+        ],
+        "acertou": true,
+        "tokens_entrada": 307,
+        "tokens_saida": 51,
+        "latencia_s": 8.971,
+        "custo_estimado_usd": 0.000307,
+        "top_k_recuperado": [
+          {
+            "faq_id": 13,
+            "score": 0.4692
+          },
+          {
+            "faq_id": 14,
+            "score": 0.4289
+          },
+          {
+            "faq_id": 10,
+            "score": 0.362
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Para atualizar o endereço para as suas entregas, você pode seguir dois caminhos diferentes nas configurações:\n\n1. Acesse \"Configurações\" > \"Endereços\", edite o endereço existente ou clique em \"Adicionar endereço\" e defina-o como principal.\n2. Ou vá em \"Configurações\" > \"Meu perfil\", edite o campo de endereço e clique em \"Salvar alterações\".\n\nFonte: FAQ #14 e FAQ #5.",
+        "faqs_citadas": [
+          5,
+          14
+        ],
+        "acertou": true,
+        "tokens_entrada": 1987,
+        "tokens_saida": 99,
+        "latencia_s": 20.141,
+        "custo_estimado_usd": 0.00129
+      }
+    },
+    {
+      "id": 4,
+      "pergunta": "Como habilito o 2FA no meu perfil?",
+      "tipo": "termo_tecnico",
+      "gabarito_faqs": [
+        18
+      ],
+      "rag": {
+        "resposta": "Para habilitar a verificação em duas etapas (2FA), você deve acessar Configurações > Segurança > Verificação em duas etapas, ativar a opção e seguir as instruções para vincular seu aplicativo autenticador ou telefone.\n\nFonte: FAQ #18",
+        "faqs_citadas": [
+          18
+        ],
+        "acertou": true,
+        "tokens_entrada": 301,
+        "tokens_saida": 53,
+        "latencia_s": 17.433,
+        "custo_estimado_usd": 0.000309,
+        "top_k_recuperado": [
+          {
+            "faq_id": 5,
+            "score": 0.3776
+          },
+          {
+            "faq_id": 18,
+            "score": 0.329
+          },
+          {
+            "faq_id": 3,
+            "score": 0.3189
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Para habilitar a verificação em duas etapas (2FA), acesse \"Configurações\" > \"Segurança\" > \"Verificação em duas etapas\". Ative a opção e siga as instruções exibidas para vincular seu aplicativo autenticador ou telefone.\n\nFonte: FAQ #18",
+        "faqs_citadas": [
+          18
+        ],
+        "acertou": true,
+        "tokens_entrada": 1980,
+        "tokens_saida": 61,
+        "latencia_s": 10.9,
+        "custo_estimado_usd": 0.001173
+      }
+    },
+    {
+      "id": 5,
+      "pergunta": "A tela congelou e o sistema fechou sozinho.",
+      "tipo": "parafrase_operacional",
+      "gabarito_faqs": [
+        20
+      ],
+      "rag": {
+        "resposta": "Se o aplicativo está travando ou fechando sozinho, você deve fechar e abrir o aplicativo, verificar sua conexão com a internet e confirmar se há alguma atualização disponível na loja. Caso o problema continue, a recomendação é reinstalar o app.\n\nFonte: FAQ #20",
+        "faqs_citadas": [
+          20
+        ],
+        "acertou": true,
+        "tokens_entrada": 291,
+        "tokens_saida": 57,
+        "latencia_s": 19.104,
+        "custo_estimado_usd": 0.000317,
+        "top_k_recuperado": [
+          {
+            "faq_id": 19,
+            "score": 0.2456
+          },
+          {
+            "faq_id": 20,
+            "score": 0.2283
+          },
+          {
+            "faq_id": 16,
+            "score": 0.2108
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Feche e abra o aplicativo, verifique sua conexão com a internet e confirme se há uma atualização disponível na loja de aplicativos. Caso o problema persista, reinstale o app.\n\nFonte: FAQ #20",
+        "faqs_citadas": [
+          20
+        ],
+        "acertou": true,
+        "tokens_entrada": 1980,
+        "tokens_saida": 44,
+        "latencia_s": 23.639,
+        "custo_estimado_usd": 0.001122
+      }
+    },
+    {
+      "id": 6,
+      "pergunta": "Vocês têm vagas abertas para estagiário de desenvolvimento?",
+      "tipo": "inexistente",
+      "gabarito_faqs": [],
+      "rag": {
+        "resposta": "Sinto muito, mas nenhuma das FAQs fornecidas contém informações sobre vagas abertas para estagiário de desenvolvimento.",
+        "faqs_citadas": [],
+        "acertou": true,
+        "tokens_entrada": 296,
+        "tokens_saida": 23,
+        "latencia_s": 2.234,
+        "custo_estimado_usd": 0.000217,
+        "top_k_recuperado": [
+          {
+            "faq_id": 20,
+            "score": 0.2673
+          },
+          {
+            "faq_id": 15,
+            "score": 0.2165
+          },
+          {
+            "faq_id": 6,
+            "score": 0.1976
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Não há informação disponível sobre esse assunto no material de atendimento.",
+        "faqs_citadas": [],
+        "acertou": true,
+        "tokens_entrada": 1981,
+        "tokens_saida": 12,
+        "latencia_s": 10.671,
+        "custo_estimado_usd": 0.001027
+      }
+    },
+    {
+      "id": 7,
+      "pergunta": "Como mudo?",
+      "tipo": "ambiguidade_extrema",
+      "gabarito_faqs": [
+        4,
+        5,
+        14
+      ],
+      "rag": {
+        "resposta": "Sua pergunta é ambígua, pois existem diferentes procedimentos dependendo do que você deseja mudar. Por favor, escolha uma das opções abaixo:\n\n1.  **Para alterar sua senha:** Acesse Configurações > Segurança > Alterar senha. Informe a senha atual, digite a nova senha duas vezes e salve.\n    Fonte: FAQ #4\n\n2.  **Para atualizar dados cadastrais (nome, telefone ou endereço geral):** Vá em Configurações > Meu perfil, edite os campos desejados e clique em \"Salvar alterações\".\n    Fonte: FAQ #5\n\n3.  **Para atualizar especificamente o endereço de entrega:** Vá em Configurações > Endereços, edite o endereço existente ou clique em \"Adicionar endereço\" e defina-o como principal.\n    Fonte: FAQ #14",
+        "faqs_citadas": [
+          4,
+          5,
+          14
+        ],
+        "acertou": true,
+        "tokens_entrada": 279,
+        "tokens_saida": 175,
+        "latencia_s": 14.008,
+        "custo_estimado_usd": 0.000664,
+        "top_k_recuperado": [
+          {
+            "faq_id": 4,
+            "score": 0.3951
+          },
+          {
+            "faq_id": 5,
+            "score": 0.34
+          },
+          {
+            "faq_id": 14,
+            "score": 0.328
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Sua pergunta é abrangente e pode se referir a diferentes tipos de alteração. Por favor, esclareça qual dessas ações você deseja realizar:\n\n*   **Mudar a senha:** Acesse Configurações > Segurança > \"Alterar senha\", informe a senha atual e cadastre a nova.\n    Fonte: FAQ #4\n\n*   **Mudar dados cadastrais (como nome ou telefone):** Vá em Configurações > \"Meu perfil\", edite os campos desejados e clique em \"Salvar alterações\".\n    Fonte: FAQ #5\n\n*   **Mudar o endereço de entrega:** Acesse Configurações > \"Endereços\" para editar um endereço existente ou clicar em \"Adicionar endereço\".\n    Fonte: FAQ #14\n\nCaso queira mudar outra informação, como cancelar uma assinatura ou excluir a conta, por favor, me informe.",
+        "faqs_citadas": [
+          4,
+          5,
+          14
+        ],
+        "acertou": true,
+        "tokens_entrada": 1973,
+        "tokens_saida": 182,
+        "latencia_s": 17.898,
+        "custo_estimado_usd": 0.001533
+      }
+    },
+    {
+      "id": 8,
+      "pergunta": "Esqueci meu e-mail, como entro na minha conta?",
+      "tipo": "ambiguo_duplo",
+      "gabarito_faqs": [
+        1,
+        2
+      ],
+      "rag": {
+        "resposta": "Nenhuma das FAQs fornecidas responde à sua pergunta sobre como proceder caso tenha esquecido o e-mail cadastrado. As FAQs disponíveis tratam apenas de recuperação de senha (FAQ #2) e do procedimento padrão de login utilizando e-mail e senha (FAQ #1).",
+        "faqs_citadas": [
+          1,
+          2
+        ],
+        "acertou": true,
+        "tokens_entrada": 313,
+        "tokens_saida": 56,
+        "latencia_s": 5.202,
+        "custo_estimado_usd": 0.000325,
+        "top_k_recuperado": [
+          {
+            "faq_id": 2,
+            "score": 0.7435
+          },
+          {
+            "faq_id": 1,
+            "score": 0.6813
+          },
+          {
+            "faq_id": 9,
+            "score": 0.4734
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "Não há informação disponível sobre como proceder caso você tenha esquecido o seu e-mail de cadastro no material de atendimento fornecido. As instruções de acesso e recuperação exigem que o e-mail seja informado.",
+        "faqs_citadas": [],
+        "acertou": false,
+        "tokens_entrada": 1982,
+        "tokens_saida": 42,
+        "latencia_s": 27.933,
+        "custo_estimado_usd": 0.001117
+      }
+    },
+    {
+      "id": 9,
+      "pergunta": "Vocês têm o papel da minha compra?",
+      "tipo": "parafrase_simples",
+      "gabarito_faqs": [
+        17
+      ],
+      "rag": {
+        "resposta": "O termo \"papel da compra\" é ambíguo no contexto das informações disponíveis. Abaixo estão as opções dependendo do que você procura:\n\n1.  **Se você se refere à Nota Fiscal:**\n    A nota fiscal fica disponível em \"Meus pedidos\", no detalhe de cada pedido, no botão \"Baixar nota fiscal\" após a confirmação do pagamento.\n    Fonte: FAQ #17\n\n2.  **Se você se refere ao acompanhamento ou status do pedido:**\n    Você pode visualizar o status atualizado (em processamento, enviado ou entregue) acessando \"Meus pedidos\" no menu da sua conta.\n    Fonte: FAQ #9",
+        "faqs_citadas": [
+          9,
+          17
+        ],
+        "acertou": true,
+        "tokens_entrada": 302,
+        "tokens_saida": 142,
+        "latencia_s": 12.889,
+        "custo_estimado_usd": 0.000577,
+        "top_k_recuperado": [
+          {
+            "faq_id": 17,
+            "score": 0.4545
+          },
+          {
+            "faq_id": 9,
+            "score": 0.443
+          },
+          {
+            "faq_id": 13,
+            "score": 0.4306
+          }
+        ]
+      },
+      "cag": {
+        "resposta": "A nota fiscal da sua compra fica disponível em \"Meus pedidos\". Para acessá-la, selecione o detalhe do pedido desejado e clique no botão \"Baixar nota fiscal\". Esta opção fica liberada após a confirmação do pagamento.\n\nFonte: FAQ #17",
+        "faqs_citadas": [
+          17
+        ],
+        "acertou": true,
+        "tokens_entrada": 1977,
+        "tokens_saida": 58,
+        "latencia_s": 2.137,
+        "custo_estimado_usd": 0.001162
+      }
+    }
+  ]
+}
